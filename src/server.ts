@@ -7,11 +7,7 @@ import routes from "./modules/routes";
 const app = express();
 
 // middleware
-app.use(
-  cors({
-    origin: ["https://book-4-woad.vercel.app", "http://localhost:5000"],
-  })
-);
+app.use(cors());
 app.use(express.json());
 
 // route

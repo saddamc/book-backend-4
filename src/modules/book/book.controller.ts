@@ -35,7 +35,7 @@ export const getBooks = async (req: Request, res: Response) => {
       filter,
       sortBy = "createdAt",
       sort = "desc",
-      limit = "10",
+      limit = "",
     } = req.query;
 
     const query =
@@ -120,7 +120,7 @@ export const deleteBook = async (req: Request, res: Response) => {
 
     res.status(201).json({
       success: true,
-      message: "User Deleted successfuly",
+      message: "Book Deleted successful",
       data,
     });
   } catch (error) {
