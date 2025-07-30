@@ -14,19 +14,20 @@ const bookSchema = new Schema<IBook, BookStaticMethods>(
     genre: {
       type: String,
       uppercase: true,
-      enum: {
-        values: [
-          "FICTION",
-          "NON_FICTION",
-          "SCIENCE",
-          "HISTORY",
-          "BIOGRAPHY",
-          "FANTASY",
-          "SCI-FI",
-          "TECHNOLOGY",
-        ],
-        message: "genre is not valid. got {VALUE} genre",
-      },
+      required: [true, "genre is missing"]
+      // enum: {
+      //   values: [
+      //     "FICTION",
+      //     "NON_FICTION",
+      //     "SCIENCE",
+      //     "HISTORY",
+      //     "BIOGRAPHY",
+      //     "FANTASY",
+      //     "SCI-FI",
+      //     "TECHNOLOGY",
+      //   ],
+      //   message: "genre is not valid. got {VALUE} genre",
+      // },
     },
     isbn: {
       type: String,

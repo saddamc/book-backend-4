@@ -3,15 +3,15 @@ import { Model } from "mongoose";
 export interface IBook {
   title: string;
   author: string;
-  genre:
-    | "FICTION"
-    | "NON_FICTION"
-    | "SCIENCE"
-    | "HISTORY"
-    | "BIOGRAPHY"
-    | "FANTASY"
-    | "SCI-FI"
-    | "TECHNOLOGY";
+  genre: string;
+    // | "FICTION"
+    // | "NON_FICTION"
+    // | "SCIENCE"
+    // | "HISTORY"
+    // | "BIOGRAPHY"
+    // | "FANTASY"
+    // | "SCI-FI"
+    // | "TECHNOLOGY";
   isbn: string;
   description: string;
   copies: number;
